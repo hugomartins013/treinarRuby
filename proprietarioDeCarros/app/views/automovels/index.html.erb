@@ -1,0 +1,29 @@
+<h1>Listing automovels</h1>
+
+<h1><font color = "green" size = 10>
+Apanhando pro ruby feio!
+</font></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @automovels.each do |automovel| %>
+      <tr>
+        <td><%= link_to 'Show', automovel %></td>
+        <td><%= link_to 'Edit', edit_automovel_path(automovel) %></td>
+        <td><%= link_to 'Destroy', automovel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Automovel', new_automovel_path %>
